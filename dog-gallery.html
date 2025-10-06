@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dog Gallery</title>
+    <style>
+        /* Basic styles for the page */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* The main gallery grid container */
+        .gallery-container {
+            display: grid;
+            /* Default: 3 equal columns for large screens */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px; /* Spacing between images */
+        }
+
+        /* Individual gallery item styling */
+        .gallery-item {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Ensures the image respects the border-radius */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            border: 3px solid transparent; /* Prepare for hover border */
+        }
+
+        /* Hover effect for gallery items */
+        .gallery-item:hover {
+            transform: scale(1.05); /* Slightly enlarge the item */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+            border: 3px solid black; /* Add black border on hover */
+        }
+
+        /* Image styling */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            /* Fills the container while maintaining aspect ratio */
+            object-fit: cover;
+            display: block; /* Removes any extra space below the image */
+        }
+
+        /* --- Responsive Design with Media Queries --- */
+
+        /* For medium screens (tablets) - 2 columns */
+        @media (max-width: 992px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* For small screens (mobile devices) - 1 column */
+        @media (max-width: 600px) {
+            .gallery-container {
+                grid-template-columns: 1fr; /* A single column */
+            }
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Adorable Dog Gallery</h1>
+
+    <div class="gallery-container">
+        <!-- You can replace these placeholder URLs with actual dog image URLs -->
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=2874&auto=format&fit=crop" alt="A happy brown dog with a red collar">
+        </div>
+        <div class="gallery-item">
+            <img src="https://imgs.search.brave.com/W0oUiKuZF7o_BixLIXl27PDU2v2gpKqyrKSfLtPjpg4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/ODY2OTIxNjUwODgt/YjQxYTE4MmIzYWQ0/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjEuMCZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE1UVjhmR1J2/WnlVeU1ITjFibWRz/WVhOelpYTjhaVzU4/TUh4OE1IeDhmREE9" alt="A small dog wearing sunglasses and a denim jacket">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=2824&auto=format&fit=crop" alt="A golden retriever looking up curiously">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?q=80&w=2874&auto=format&fit=crop" alt="Two small puppies playing in the grass">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2940&auto=format&fit=crop" alt="Two dogs running on a sidewalk in autumn">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=2884&auto=format&fit=crop" alt="A small puppy with a blue bow tie">
+        </div>
+        <div class="gallery-item">
+            <img src="https://imgs.search.brave.com/lGJDRlGx3-81I3-gf5WXuRDZvyPfOQQFV2rfFcbppKo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTk4/ODIyMTg2L3Bob3Rv/L3NpYmVyaWFuLWh1/c2t5LW1vdGhlci13/aXRoLXB1cHB5LXNp/dHRpbmctb24tc29m/YS5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9MjFXWWpGZzJ5/U19lTksySnRNbXhy/YlhOaUpwaFFwOWZW/ZjJsbmd4ZU85UT0" alt="A siberian husky puppy sitting in the snow">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?q=80&w=2835&auto=format&fit=crop" alt="A dog peeking its head out of a car window">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?q=80&w=2874&auto=format&fit=crop" alt="A golden retriever running on a beach">
+        </div>
+    </div>
+
+</body>
+</html>
+

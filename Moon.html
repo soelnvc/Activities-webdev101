@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Make animation of the moon rotating around the earth-->
+</head>
+<style>
+    .container {
+        padding: 40px;
+        text-align: center;
+        background-color: black;
+        border-radius: 2%;
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: auto;
+    }
+    .earth {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .moon {
+        width: 30px;
+        height: 30px;
+        background-color: #D3D3D3;  
+        border-radius: 50%;
+        position: absolute;
+        top: 45%;
+        left: 20%;
+        transform-origin: 150px; 
+        animation: orbit 5s linear infinite;
+        box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8),  
+                    inset 0 0 10px rgba(255, 255, 255, 0.5); 
+    }
+
+    @keyframes orbit {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(90deg); }
+  50%  { transform: rotate(180deg); }
+  75%  { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+    
+    
+</style>
+<body>
+    <div class="container">
+        <div class="earth"></div>
+        <div class="moon"></div>
+    </div>
+</body>
+</html>
