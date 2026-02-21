@@ -12,7 +12,6 @@ This repository contains various small-scale projects, each designed to tackle a
 | :--- | :--- | :--- |
 | `grid.html` | **Layouts** | Implementation of CSS Grid for complex, responsive structures. |
 | `contact_form.html` | **User Input** | Semantic HTML forms with validation and accessible labels. |
-| `Ferriswheel.css` | **Animations** | Exploring CSS keyframes and transformations for smooth UI motion. |
 | `dog-gallery.html` | **Media** | Responsive image handling and aspect ratio management. |
 | `profile_card.html` | **Components** | Building reusable UI components using the Box Model. |
 
